@@ -1,0 +1,35 @@
+#nav-bar {
+    background-color: #204;
+    color: aliceblue;
+    display: flex;
+    justify-content:space-between;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.links {
+    text-decoration: none;
+    display: flexbox;
+    list-style: none;
+    flex: .2;
+    justify-content: right;
+}
+
+.links li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.links li a {
+    display: block;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+#logo {
+    align-self: center;
+    display: inline-block;
+    padding: 0px 5px;
+    flex: 1;
+}

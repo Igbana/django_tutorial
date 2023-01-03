@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ccc;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0px;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+
+td {
+    font-size: small;
+    font-weight: normal;
+}
+
+#update-link {
+    color:rgb(7, 102, 102);
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+#delete-link {
+    color: red;
+}
+
+button {
+    background-color: blue;
+    width: 100%;
+    border: 1px solid blue;
+    border-radius: 4px;
+    height: 30px;
+    color: aliceblue;
+    align-self: center;
+}

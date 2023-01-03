@@ -1,0 +1,11 @@
+{% block navbar %}
+    <div id="nav-bar">
+        <h3 id="logo">Egg <span id="wrd2">Inc.</span></h3>
+        <ul class="links">
+            <li><a href="{% url 'home' %}">Dashboard</a></li>
+            <li><a href="{% url 'products' %}">Products</a></li>
+            {% comment %} <li><a href="{% url 'customers' %}">Customers</a></li> {% endcomment %}
+        </ul>
+    </div>
+{% endblock navbar %}
+    

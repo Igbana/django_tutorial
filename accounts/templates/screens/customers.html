@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static '/css/screens/customers.css' %}">
+{% endblock stylesheet %}
+
+{% block content %}
+
+<div class="top-cards">
+    <div class="card customer-card">
+        <h4>Customer</h4>
+        <button class="update">
+            Update Customer
+        </button>
+        <button class="delete">
+            Delete Customer
+        </button>
+    </div>
+    <div class="card contact-info-card">
+        <h4>Contact Information</h4>
+        <hr>
+        <p>Email: {{customer.email}}</p>
+        <p>Phone: {{customer.phone}}</p>
+    </div>
+    <div class="card total-orders">
+        <h4>Total Orders</h4>
+        <h1>{{total_orders}}</h1>
+    </div>
+</div>
+<div class="card search-box">
+    <button class="search-button">
+        Search
+    </button>
+</div>
+
+<div class="card table-card">
+    {% include 'components/order_table.html' %}
+</div>
+
+
+{% endblock content %}

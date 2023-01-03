@@ -1,0 +1,52 @@
+.card{
+    margin: 0px 5px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 6px;
+    margin: 20px 10px;
+    width: 100%;
+}
+
+.top-cards {
+    display: flex;
+    /* margin: 10px 0px; */
+}
+
+.search-button {
+    width: 80px;
+    background-color: blue;
+    border: 1px solid blue;
+    border-radius: 4px;
+    height: 30px;
+    color: aliceblue;
+    align-self: center;
+}
+
+.update, .delete {
+    background-color: white;
+    margin: 4px 0px;
+    width: 100%;
+    border-radius: 4px;
+    height: 30px;
+    align-self: center;
+}
+
+.update {
+    border: 1px solid rgb(42, 163, 127);
+    color: rgb(42, 163, 127);
+}
+
+.update:hover{
+    background-color: rgb(42, 163, 127);
+    color: aliceblue;
+}
+
+.delete {
+    border: 1px solid rgb(235, 62, 19);
+    color: rgb(235, 62, 19);
+}
+
+.delete:hover{
+    background-color: rgb(235, 62, 19);
+    color: aliceblue;
+}

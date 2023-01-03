@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block stylesheet %}<link rel="stylesheet" href="{% static '/css/screens/delete.css' %}">{% endblock stylesheet %}
+
+
+{% block content %}
+    <h2>Are you sure you want to remove {{item}} from orders??</h2>
+    <form action="{% url 'delete_order' item.id %}" method="post">
+        {% csrf_token %}
+        <input type="submit" id='delete-btn' value='Delete'>
+        <input type="button" id='cancel-btn' onclick=location.href="{% url 'home' %}" value = "Cancel">
+    </form>
+{% endblock content %}
+    

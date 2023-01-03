@@ -1,0 +1,29 @@
+table {
+    width: 100%;
+    text-align: left;
+}
+
+h5 {
+    font-size: large;
+}
+
+th {
+    font-size: medium;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0px;
+}
+
+td {
+    font-size: small;
+    font-weight: normal;
+}
+
+.products-div {
+    background-color: aliceblue;
+    margin: 10px 20px;
+    padding: 15px;
+    border-radius: 6px;
+}

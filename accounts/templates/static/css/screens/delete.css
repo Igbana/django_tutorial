@@ -1,0 +1,31 @@
+form {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#delete-btn, #cancel-btn {
+    margin: 0px 20px;
+    height: 50px;
+    background-color: aliceblue;
+    width: 100%;
+}
+
+#delete-btn {
+    border: 1px solid red;
+    color: red;
+}
+
+#delete-btn:hover {
+    color: aliceblue;
+    background-color: red;
+}
+
+#cancel-btn {
+    border: 1px solid rgb(7, 102, 102);;
+    color: rgb(7, 102, 102);;
+}
+
+#cancel-btn:hover {
+    color: aliceblue;
+    background-color: rgb(7, 102, 102);;
+}

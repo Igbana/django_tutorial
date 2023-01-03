@@ -1,0 +1,62 @@
+.cards {
+    display: flex;
+    justify-content:space-evenly;
+    color: aliceblue;
+    margin: 20px 0px;
+}
+
+.card {
+    border-radius: 10px;
+    padding: 0px 10px;
+    flex: 1;
+    margin: 0px 20px;
+}
+
+h4 {
+    text-align: center;
+}
+
+.tables {
+    display: flex;
+    margin: 20px 15px;
+}
+
+h5 {
+    text-align: left;
+}
+
+.table-card {
+    margin: 0px 5px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+a {
+    color: black;
+}
+
+.left-div {
+    flex: 4;
+}
+
+.right-div {
+    flex: 6;
+}
+
+th {
+    font-size:small;
+}
+
+
+.total-orders-card {
+    background-color:rgb(0, 131, 131);    
+}
+
+.orders-delivered-card {
+    background-color:rgb(28, 75, 161);
+}
+
+.orders-pending-card {
+    background-color:rgb(36, 218, 148);
+}

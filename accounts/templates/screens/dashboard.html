@@ -1,0 +1,56 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block stylesheet %}<link rel="stylesheet" href="{% static '/css/screens/dashboard.css' %}">{% endblock stylesheet %}
+
+
+{% block content %}
+<div class="cards">
+    <div class="card total-orders-card">
+        <h4>Total Orders</h4>
+        <h1>{{total_orders}}</h1>
+    </div>
+    <div class="card orders-delivered-card">
+        <h4>Orders Delivered</h3>
+        <h1>{{orders_delivered}}</h1>
+    </div>
+    <div class="card orders-pending-card">
+        <h4>Orders Pending</h3>
+        <h1>{{orders_pending}}</h1>
+    </div>
+</div>
+
+<div class="tables">
+    <div class="left-div">
+    <h5>CUSTOMERS</h5>
+    <div class="table-card customers">
+        <button>
+            Create customer
+        </button>
+        <table>
+            <tr>
+                <th>Customer</th>
+                <th>Orders</th>
+            </tr>
+            {% for customer in customers %}
+            <tr>
+                <td><a href="{% url 'customer' customer.id %}">{{ customer.name }}</a></td>
+                <td>{{ customer.phone }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+    <div class="right-div">
+    <h5>LAST 5 ORDERS</h5>
+    <div class="table-card last-5-orders">
+        <button onclick=location.href="{% url 'create_order' %}">
+            Create order
+        </button>
+        {% include 'components/order_table.html' %}
+    </div>
+</div>
+</div>
+
+{% endblock content %}
