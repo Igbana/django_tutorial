@@ -4,4 +4,5 @@ from .models import Order
 class OrderForm(ModelForm):
     class Meta:
         model = Order
+        # fields = ['product', 'status']
         fields = '__all__'

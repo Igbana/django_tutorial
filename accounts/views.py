@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import OrderForm
+from django.forms import formset_factory
 from .models import *
 
 # Create your views here.
@@ -25,17 +26,21 @@ def product(request):
 
 def customer(request, pk):
     customer = Customer.objects.get(id=pk)
-    orders = customer.order_set.all()
-    total_orders = orders.count()
+    order = customer.order_set.all()
+    total_orders = order.count()
     context = {
-        'orders': orders,
+        'orders': order,
         'customer': customer,
         'total_orders': total_orders,
     }
+    print(order)
     return render(request, 'screens/customers.html', context=context)
 
-def create_order(request):
-    form = OrderForm()
+def create_order(request, pk):
+    customer = Customer.objects.get(id=pk)
+    # OrderFormSet = formset_factory(Customer, Order, fields=('product', 'status'))
+    form = OrderForm(initial={'customer': customer})
+    # formset = OrderFormSet(instance=customer)
     context = {'form': form}
     if request.method == 'POST':
         form = OrderForm(request.POST)

@@ -10,8 +10,8 @@
 <div class="top-cards">
     <div class="card customer-card">
         <h4>Customer</h4>
-        <button class="update">
-            Update Customer
+        <button class="update" onclick=location.href="{% url 'create_order' customer.id %}">
+            New Order
         </button>
         <button class="delete">
             Delete Customer

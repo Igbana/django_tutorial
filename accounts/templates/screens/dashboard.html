@@ -45,9 +45,9 @@
     <div class="right-div">
     <h5>LAST 5 ORDERS</h5>
     <div class="table-card last-5-orders">
-        <button onclick=location.href="{% url 'create_order' %}">
+        {% comment %} <button onclick=location.href="{% url 'create_order' %}">
             Create order
-        </button>
+        </button> {% endcomment %}
         {% include 'components/order_table.html' %}
     </div>
 </div>
